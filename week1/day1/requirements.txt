@@ -1,0 +1,6 @@
+# Basic Python packages used in demos
+numpy
+pandas
+matplotlib
+requests
+python-dotenv

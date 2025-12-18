@@ -1,0 +1,18 @@
+# Core RAG framework
+llama-index
+llama-index-embeddings-huggingface
+llama-index-llms-google-genai
+
+# PDF processing
+PyMuPDF
+
+# Data processing
+numpy
+pandas
+
+# API calls
+openai
+requests
+
+# Other tools
+python-dotenv
