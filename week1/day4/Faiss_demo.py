@@ -125,3 +125,18 @@ D, I = index.search(xq, k)
 # 打印后5个查询向量的最近邻索引（使用nprobe=10）
 print("使用nprobe=10时，后5个查询向量的最近邻索引:")
 print(I[-5:])                  # neighbors of the 5 last queries
+
+nlist = 100
+m = 8                             # number of subquantizers
+k = 4
+quantizer = faiss.IndexFlatL2(d)  # this remains the same
+index = faiss.IndexIVFPQ(quantizer, d, nlist, m, 8)
+                                    # 8 specifies that each sub-vector is encoded as 8 bits
+index.train(xb)
+index.add(xb)
+D, I = index.search(xb[:5], k) # sanity check
+print(I)
+print(D)
+index.nprobe = 10              # make comparable with experiment above
+D, I = index.search(xq, k)     # search
+print(I[-5:])

@@ -8,7 +8,7 @@ from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 # 初始化OpenAI客户端
 client = OpenAI(
     base_url="https://api.siliconflow.cn/v1",
-    api_key='sk-zqzehnidkvjxmpgoqohexqzxwnvyszxwgxucpxmtftdpgrgv'
+   api_key=os.getenv("OPENROUTER_API_KEY")
 )
 
 def rewrite_query(original_query, model="Qwen/Qwen2.5-72B-Instruct"):

@@ -53,7 +53,7 @@ def chunk_text(text, n, overlap):
 # api_key: API密钥
 client = OpenAI(
     base_url="https://api.siliconflow.cn/v1",
-    api_key='sk-zqzehnidkvjxmpgoqohexqzxwnvyszxwgxucpxmtftdpgrgv'
+   api_key=os.getenv("OPENROUTER_API_KEY")
 )
 
 def create_embeddings(text, model="BAAI/bge-base-en-v1.5"):

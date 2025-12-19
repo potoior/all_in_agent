@@ -10,7 +10,7 @@ from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 # api_key: 从环境变量获取API密钥
 client = OpenAI(
     base_url="https://api.siliconflow.cn/v1",
-    api_key='sk-zqzehnidkvjxmpgoqohexqzxwnvyszxwgxucpxmtftdpgrgv'
+   api_key=os.getenv("OPENROUTER_API_KEY")
 )
 
 def extract_text_from_pdf(pdf_path):
