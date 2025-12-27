@@ -1,0 +1,31 @@
+[project]
+name = "docchat"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn>=0.32.0",
+    "langchain-community>=0.4.1",
+    "langchain-core>=1.2.4",
+    "langchain-openai>=1.1.6",
+    "openai>=2.14.0",
+    "pymupdf>=1.26.7",
+    "python-dotenv>=1.2.1",
+    "requests>=2.32.5",
+    "llama-index>=0.14.10",
+    "llama-index-embeddings-huggingface>=0.6.1",
+    "llama-index-llms-google-genai>=0.8.2",
+    "langchain-huggingface>=0.3.0",
+    "hf-xet>=1.2.0",
+    "chromadb>=1.4.0",
+    "langchain-chroma>=0.1.0",
+    "myapplication>=0.1.0",
+    "langchain>=1.2.0",
+    "pytest>=9.0.2",
+]
+
+[[tool.uv.index]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
